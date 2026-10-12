@@ -1,0 +1,574 @@
+/* =========================================
+KITCHEN KA KAND - MENU CSS
+Funny + Modern + Responsive
+========================================= */
+
+{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+font-family: "Segoe UI", Arial, sans-serif;
+background: #fff8ef;
+color: #292929;
+line-height: 1.6;
+}
+
+/* =========================================
+HEADER
+========================================= */
+
+header {
+background: linear-gradient(135deg, #ff512f, #dd2476);
+color: white;
+
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+padding: 18px 7%;
+position: sticky;
+top: 0;
+z-index: 1000;
+
+box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+
+
+}
+
+.logo {
+font-size: 1.7rem;
+font-weight: 800;
+letter-spacing: 0.5px;
+}
+
+nav {
+display: flex;
+gap: 10px;
+}
+
+nav a {
+color: white;
+text-decoration: none;
+font-weight: 600;
+
+padding: 9px 15px;
+border-radius: 25px;
+
+transition: 0.3s ease;
+
+
+}
+
+nav a:hover,
+nav a.active {
+background: white;
+color: #e63946;
+transform: translateY(-2px);
+}
+
+/* =========================================
+PAGE TITLE / HERO
+========================================= */
+
+.page-title {
+text-align: center;
+padding: 75px 20px 55px;
+
+background:
+    radial-gradient(circle at top left, #ffd166 0%, transparent 30%),
+    radial-gradient(circle at bottom right, #ff8fab 0%, transparent 30%),
+    #fff1dc;
+
+
+}
+
+.funny-badge {
+display: inline-block;
+
+background: #292929;
+color: white;
+
+padding: 7px 16px;
+border-radius: 30px;
+
+font-size: 0.85rem;
+font-weight: 700;
+
+margin-bottom: 15px;
+
+animation: shake 2s infinite;
+
+
+}
+
+.page-title h1 {
+color: #e63946;
+font-size: clamp(2.5rem, 6vw, 4.5rem);
+margin-bottom: 10px;
+}
+
+.page-title p {
+font-size: 1.15rem;
+color: #555;
+}
+
+.page-title .subtitle {
+margin-top: 8px;
+color: #e76f51;
+font-style: italic;
+font-weight: 600;
+}
+
+/* =========================================
+MENU LAYOUT
+========================================= */
+
+.menu {
+width: min(1100px, 92%);
+margin: 50px auto;
+
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 25px;
+
+
+}
+
+/* =========================================
+MENU CARD
+========================================= */
+
+.menu-card {
+background: white;
+
+padding: 25px;
+border-radius: 22px;
+
+box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+border: 2px solid transparent;
+
+transition: 0.35s ease;
+
+position: relative;
+overflow: hidden;
+
+
+}
+
+.menu-card::before {
+content: "";
+position: absolute;
+
+width: 90px;
+height: 90px;
+
+background: #ffd166;
+border-radius: 50%;
+
+top: -45px;
+right: -45px;
+
+opacity: 0.4;
+
+
+}
+
+.menu-card:hover {
+transform: translateY(-8px);
+border-color: #ff7043;
+
+box-shadow: 0 18px 40px rgba(230, 57, 70, 0.18);
+
+
+}
+
+.menu-card h2 {
+color: #e63946;
+font-size: 1.6rem;
+margin-bottom: 3px;
+}
+
+.category-text {
+color: #777;
+font-size: 0.9rem;
+margin-bottom: 20px;
+}
+
+/* =========================================
+FOOD ITEMS
+========================================= */
+
+.food {
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+gap: 12px;
+
+padding: 18px 0;
+
+border-bottom: 1px dashed #ddd;
+
+
+}
+
+.food:last-child {
+border-bottom: none;
+}
+
+.food-info {
+display: flex;
+align-items: center;
+gap: 13px;
+
+min-width: 0;
+
+
+}
+
+.food-info img {
+width: 85px;
+height: 85px;
+
+flex-shrink: 0;
+
+object-fit: cover;
+
+border-radius: 15px;
+
+border: 3px solid #fff1dc;
+
+transition: 0.3s ease;
+
+
+}
+
+.food:hover img {
+transform: rotate(-4deg) scale(1.08);
+}
+
+.food h3 {
+font-size: 1.05rem;
+color: #333;
+margin-bottom: 2px;
+}
+
+.food p {
+font-size: 0.82rem;
+color: #777;
+line-height: 1.35;
+}
+
+.food small {
+display: block;
+
+color: #f97316;
+
+font-size: 0.72rem;
+margin-top: 4px;
+
+font-weight: 600;
+
+
+}
+
+.price {
+flex-shrink: 0;
+
+background: #e63946;
+color: white;
+
+padding: 7px 12px;
+
+border-radius: 20px;
+
+font-weight: 800;
+font-size: 0.9rem;
+
+box-shadow: 0 4px 10px rgba(230, 57, 70, 0.25);
+
+
+}
+
+/* =========================================
+HUNGRY BOX
+========================================= */
+
+.hungry-box {
+width: min(900px, 90%);
+margin: 60px auto;
+
+text-align: center;
+
+padding: 45px 20px;
+
+border-radius: 25px;
+
+color: white;
+
+background: linear-gradient(135deg, #ff512f, #dd2476);
+
+box-shadow: 0 15px 35px rgba(221, 36, 118, 0.25);
+
+
+}
+
+.hungry-box h2 {
+font-size: 2rem;
+margin-bottom: 5px;
+}
+
+.hungry-box p {
+margin-bottom: 20px;
+}
+
+.order-btn {
+display: inline-block;
+
+background: white;
+color: #e63946;
+
+padding: 12px 25px;
+
+border-radius: 30px;
+
+text-decoration: none;
+font-weight: 800;
+
+transition: 0.3s ease;
+
+
+}
+
+.order-btn:hover {
+transform: scale(1.08);
+background: #fff1dc;
+}
+
+/* =========================================
+FOOTER
+========================================= */
+
+footer {
+background: #222;
+color: white;
+
+text-align: center;
+
+padding: 40px 7% 25px;
+
+margin-top: 60px;
+
+
+}
+
+.footer-about {
+max-width: 650px;
+margin: auto;
+}
+
+.footer-about h2 {
+color: #ff7043;
+margin-bottom: 10px;
+}
+
+.footer-about p {
+color: #ccc;
+}
+
+.copyright {
+color: #888;
+margin-top: 25px;
+font-size: 0.85rem;
+}
+
+/* =========================================
+ANIMATIONS
+========================================= */
+
+@keyframes shake {
+0%, 100% {
+transform: rotate(0);
+}
+
+25% {
+    transform: rotate(-2deg);
+}
+
+75% {
+    transform: rotate(2deg);
+}
+
+
+}
+
+/* =========================================
+TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+header {
+    padding: 16px 5%;
+}
+
+.menu {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.menu-card:last-child {
+    grid-column: span 2;
+}
+
+
+}
+
+/* =========================================
+MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+header {
+    flex-direction: column;
+    gap: 12px;
+    padding: 15px 10px;
+}
+
+.logo {
+    font-size: 1.4rem;
+}
+
+nav {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav a {
+    font-size: 0.85rem;
+    padding: 7px 12px;
+}
+
+.page-title {
+    padding: 55px 15px 40px;
+}
+
+.page-title h1 {
+    font-size: 2.7rem;
+}
+
+.page-title p {
+    font-size: 1rem;
+}
+
+.menu {
+    width: 92%;
+    grid-template-columns: 1fr;
+    margin: 30px auto;
+}
+
+.menu-card:last-child {
+    grid-column: auto;
+}
+
+.menu-card {
+    padding: 20px 16px;
+}
+
+.food {
+    align-items: flex-start;
+}
+
+.food-info {
+    align-items: flex-start;
+}
+
+.food-info img {
+    width: 70px;
+    height: 70px;
+}
+
+.food h3 {
+    font-size: 0.95rem;
+}
+
+.food p {
+    font-size: 0.76rem;
+}
+
+.food small {
+    font-size: 0.65rem;
+}
+
+.price {
+    font-size: 0.78rem;
+    padding: 6px 9px;
+}
+
+.hungry-box {
+    margin: 40px auto;
+    padding: 35px 15px;
+}
+
+.hungry-box h2 {
+    font-size: 1.6rem;
+}
+
+
+}
+
+/* =========================================
+VERY SMALL PHONES
+========================================= */
+
+@media (max-width: 400px) {
+
+.food {
+    flex-direction: column;
+}
+
+.food-info {
+    width: 100%;
+}
+
+.price {
+    align-self: flex-end;
+}
+
+nav a {
+    padding: 6px 9px;
+    font-size: 0.78rem;
+}
+
+.page-title h1 {
+    font-size: 2.3rem;
+}
+
+
+}
+
+/* =========================================
+REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+*,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+}
+
+
+}
